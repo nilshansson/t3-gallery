@@ -4,7 +4,7 @@
 
 -[x] make it deploy(vercel)
 -[x]scaffold basic ui with mockdata
--[ ] actually set up a database(vercel postgres)
+-[X] actually set up a database(vercel postgres)
 -[ ] Attach database to UI1
 -[ ] Add authentication
 -[ ] add Image upload
