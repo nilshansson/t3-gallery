@@ -19,7 +19,11 @@ export function CSPostHogProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PostHogAuthWrapper({ children }: { children: React.ReactNode }) {
+export function PostHogAuthWrapper({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const auth = useAuth();
   const userInfo = useUser();
 
