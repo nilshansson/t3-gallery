@@ -1,5 +1,6 @@
 import { getImage } from "~/server/queries";
 import { Modal } from "./modal";
+import FullPageImageView from "~/components/full-image-page";
 export default async function PhotoModal({
   params: { id: photoId },
 }: {
@@ -11,7 +12,7 @@ export default async function PhotoModal({
   return (
     <div>
       <Modal>
-        <img src={image.url} className="w-96" />
+        <FullPageImageView id={idAsNumber} />
       </Modal>
     </div>
   );

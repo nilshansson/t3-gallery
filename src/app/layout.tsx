@@ -8,7 +8,7 @@ import { TopNav } from "./_components/topnav";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
-
+import { GeistSans } from "geist/font/sans";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -29,9 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className={`${GeistSans.variable}`}>
         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-        <body className={`${inter.variable} flex flex-col gap-4`}>
+        <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
           {children}
           {modal}
